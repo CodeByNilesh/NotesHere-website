@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+.vscode/
+.Python
+.DS_Store
+node_modules/
+
+# If you add a system-level virtualenv
+venv/
+ENV/
+env/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
