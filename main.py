@@ -5,6 +5,17 @@ from fastapi.templating import Jinja2Templates
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
+
+MONGO_URL = os.getenv("MONGO_URL")
+if MONGO_URL:
+    conn = MongoClient(MONGO_URL)
+else:
+    print("MongoDB URL not set in environment variables.")
+
+
 
 try:
 	import certifi
